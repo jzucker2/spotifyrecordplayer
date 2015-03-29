@@ -16,6 +16,8 @@
 
 - (BOOL)handleAuthCallbackURL:(NSURL *)callbackURL;
 
-@property (nonatomic, readonly) SPTAudioStreamingController *player;
+- (void)renewToken;
+
+//@property (nonatomic, readonly) SPTAudioStreamingController *player;
 
 @end

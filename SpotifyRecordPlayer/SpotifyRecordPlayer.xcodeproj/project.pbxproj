@@ -19,6 +19,9 @@
 		9721FAE41AC7EC6900C76837 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9721FAE31AC7EC6900C76837 /* Spotify.framework */; };
 		9721FAE61AC7EC9F00C76837 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9721FAE51AC7EC9F00C76837 /* AVFoundation.framework */; };
 		9721FAED1AC864A400C76837 /* JSZSpotifyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */; };
+		9721FAF01AC8B52700C76837 /* JSZSpotifyPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAEF1AC8B52700C76837 /* JSZSpotifyPlayer.m */; };
+		9721FAF81AC8B7EC00C76837 /* SpotifyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAF71AC8B7EC00C76837 /* SpotifyLoginViewController.m */; };
+		9721FAFC1AC8B8FA00C76837 /* JSZSpotifyAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAFB1AC8B8FA00C76837 /* JSZSpotifyAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		9721FAE71AC7F39F00C76837 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9721FAEB1AC864A400C76837 /* JSZSpotifyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZSpotifyAPI.h; sourceTree = "<group>"; };
 		9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZSpotifyAPI.m; sourceTree = "<group>"; };
+		9721FAEE1AC8B52700C76837 /* JSZSpotifyPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZSpotifyPlayer.h; sourceTree = "<group>"; };
+		9721FAEF1AC8B52700C76837 /* JSZSpotifyPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZSpotifyPlayer.m; sourceTree = "<group>"; };
+		9721FAF61AC8B7EC00C76837 /* SpotifyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyLoginViewController.h; sourceTree = "<group>"; };
+		9721FAF71AC8B7EC00C76837 /* SpotifyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyLoginViewController.m; sourceTree = "<group>"; };
+		9721FAFA1AC8B8FA00C76837 /* JSZSpotifyAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZSpotifyAuth.h; sourceTree = "<group>"; };
+		9721FAFB1AC8B8FA00C76837 /* JSZSpotifyAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZSpotifyAuth.m; sourceTree = "<group>"; };
 		FB6A40A15AA059FB25BA2F98 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,13 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				9721FAE71AC7F39F00C76837 /* Constants.h */,
-				9721FABE1AC7E62300C76837 /* AppDelegate.h */,
-				9721FABF1AC7E62300C76837 /* AppDelegate.m */,
-				9721FAEB1AC864A400C76837 /* JSZSpotifyAPI.h */,
-				9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */,
-				9721FAC41AC7E62300C76837 /* ViewController.h */,
-				9721FAC51AC7E62300C76837 /* ViewController.m */,
-				9721FAC71AC7E62300C76837 /* Main.storyboard */,
+				9721FAF41AC8B7C200C76837 /* App Delegate */,
+				9721FAF31AC8B7B600C76837 /* Spotify */,
+				9721FAF11AC8B7A400C76837 /* UI */,
 				9721FACA1AC7E62300C76837 /* Images.xcassets */,
 				9721FACC1AC7E62300C76837 /* LaunchScreen.xib */,
 				9721FAC11AC7E62300C76837 /* SpotifyRecordPlayer.xcdatamodeld */,
@@ -159,6 +164,56 @@
 				9721FAD81AC7E62300C76837 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9721FAF11AC8B7A400C76837 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9721FAC71AC7E62300C76837 /* Main.storyboard */,
+				9721FAF91AC8B7F200C76837 /* Spotify Login View Controller */,
+				9721FAF51AC8B7CF00C76837 /* First View Controller */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		9721FAF31AC8B7B600C76837 /* Spotify */ = {
+			isa = PBXGroup;
+			children = (
+				9721FAEB1AC864A400C76837 /* JSZSpotifyAPI.h */,
+				9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */,
+				9721FAFA1AC8B8FA00C76837 /* JSZSpotifyAuth.h */,
+				9721FAFB1AC8B8FA00C76837 /* JSZSpotifyAuth.m */,
+				9721FAEE1AC8B52700C76837 /* JSZSpotifyPlayer.h */,
+				9721FAEF1AC8B52700C76837 /* JSZSpotifyPlayer.m */,
+			);
+			name = Spotify;
+			sourceTree = "<group>";
+		};
+		9721FAF41AC8B7C200C76837 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9721FABE1AC7E62300C76837 /* AppDelegate.h */,
+				9721FABF1AC7E62300C76837 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		9721FAF51AC8B7CF00C76837 /* First View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9721FAC41AC7E62300C76837 /* ViewController.h */,
+				9721FAC51AC7E62300C76837 /* ViewController.m */,
+			);
+			name = "First View Controller";
+			sourceTree = "<group>";
+		};
+		9721FAF91AC8B7F200C76837 /* Spotify Login View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9721FAF61AC8B7EC00C76837 /* SpotifyLoginViewController.h */,
+				9721FAF71AC8B7EC00C76837 /* SpotifyLoginViewController.m */,
+			);
+			name = "Spotify Login View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +358,10 @@
 			files = (
 				9721FAED1AC864A400C76837 /* JSZSpotifyAPI.m in Sources */,
 				9721FAC01AC7E62300C76837 /* AppDelegate.m in Sources */,
+				9721FAFC1AC8B8FA00C76837 /* JSZSpotifyAuth.m in Sources */,
 				9721FAC31AC7E62300C76837 /* SpotifyRecordPlayer.xcdatamodeld in Sources */,
+				9721FAF01AC8B52700C76837 /* JSZSpotifyPlayer.m in Sources */,
+				9721FAF81AC8B7EC00C76837 /* SpotifyLoginViewController.m in Sources */,
 				9721FAC61AC7E62300C76837 /* ViewController.m in Sources */,
 				9721FABD1AC7E62300C76837 /* main.m in Sources */,
 			);

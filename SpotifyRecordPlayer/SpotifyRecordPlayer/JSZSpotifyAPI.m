@@ -11,7 +11,7 @@
 #import "JSZSpotifyAPI.h"
 
 @interface JSZSpotifyAPI ()
-@property (nonatomic, readwrite) SPTAudioStreamingController *player;
+//@property (nonatomic, readwrite) SPTAudioStreamingController *player;
 @end
 
 @implementation JSZSpotifyAPI
@@ -79,17 +79,35 @@
     return NO;
 }
 
-#pragma mark - SPTAudioStreamingController
+#pragma mark - Auth
 
-- (SPTAudioStreamingController *)player {
+- (void)renewToken {
     SPTAuth *auth = [SPTAuth defaultInstance];
     
-    if (_player == nil) {
-        _player = [[SPTAudioStreamingController alloc] initWithClientId:auth.clientID];
-//        _player.playbackDelegate = self;
-        _player.diskCache = [[SPTDiskCache alloc] initWithCapacity:1024 * 1024 * 64];
-    }
-    return _player;
+    [auth renewSession:auth.session callback:^(NSError *error, SPTSession *session) {
+        auth.session = session;
+        
+        if (error) {
+//            self.statusLabel.text = @"Refreshing token failed.";
+            NSLog(@"*** Error renewing session: %@", error);
+            return;
+        }
+        
+        
+    }];
 }
+
+//#pragma mark - SPTAudioStreamingController
+//
+//- (SPTAudioStreamingController *)player {
+//    SPTAuth *auth = [SPTAuth defaultInstance];
+//    
+//    if (_player == nil) {
+//        _player = [[SPTAudioStreamingController alloc] initWithClientId:auth.clientID];
+////        _player.playbackDelegate = self;
+//        _player.diskCache = [[SPTDiskCache alloc] initWithCapacity:1024 * 1024 * 64];
+//    }
+//    return _player;
+//}
 
 @end
