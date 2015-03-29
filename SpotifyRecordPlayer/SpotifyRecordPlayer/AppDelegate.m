@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JSZSpotifyAPI.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [JSZSpotifyAPI sharedInstance];
     return YES;
 }
 
@@ -42,6 +44,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+#pragma mark - URL handling
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[JSZSpotifyAPI sharedInstance] handleAuthCallbackURL:url];
 }
 
 #pragma mark - Core Data stack

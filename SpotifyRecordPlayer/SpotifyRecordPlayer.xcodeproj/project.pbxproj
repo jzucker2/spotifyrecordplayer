@@ -18,6 +18,7 @@
 		9721FADA1AC7E62300C76837 /* SpotifyRecordPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAD91AC7E62300C76837 /* SpotifyRecordPlayerTests.m */; };
 		9721FAE41AC7EC6900C76837 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9721FAE31AC7EC6900C76837 /* Spotify.framework */; };
 		9721FAE61AC7EC9F00C76837 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9721FAE51AC7EC9F00C76837 /* AVFoundation.framework */; };
+		9721FAED1AC864A400C76837 /* JSZSpotifyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		9721FAD91AC7E62300C76837 /* SpotifyRecordPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyRecordPlayerTests.m; sourceTree = "<group>"; };
 		9721FAE31AC7EC6900C76837 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		9721FAE51AC7EC9F00C76837 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9721FAE71AC7F39F00C76837 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9721FAEB1AC864A400C76837 /* JSZSpotifyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZSpotifyAPI.h; sourceTree = "<group>"; };
+		9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZSpotifyAPI.m; sourceTree = "<group>"; };
 		FB6A40A15AA059FB25BA2F98 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +119,11 @@
 		9721FAB91AC7E62300C76837 /* SpotifyRecordPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				9721FAE71AC7F39F00C76837 /* Constants.h */,
 				9721FABE1AC7E62300C76837 /* AppDelegate.h */,
 				9721FABF1AC7E62300C76837 /* AppDelegate.m */,
+				9721FAEB1AC864A400C76837 /* JSZSpotifyAPI.h */,
+				9721FAEC1AC864A400C76837 /* JSZSpotifyAPI.m */,
 				9721FAC41AC7E62300C76837 /* ViewController.h */,
 				9721FAC51AC7E62300C76837 /* ViewController.m */,
 				9721FAC71AC7E62300C76837 /* Main.storyboard */,
@@ -205,6 +212,11 @@
 				TargetAttributes = {
 					9721FAB61AC7E62300C76837 = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9721FAD21AC7E62300C76837 = {
 						CreatedOnToolsVersion = 6.2;
@@ -289,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9721FAED1AC864A400C76837 /* JSZSpotifyAPI.m in Sources */,
 				9721FAC01AC7E62300C76837 /* AppDelegate.m in Sources */,
 				9721FAC31AC7E62300C76837 /* SpotifyRecordPlayer.xcdatamodeld in Sources */,
 				9721FAC61AC7E62300C76837 /* ViewController.m in Sources */,
