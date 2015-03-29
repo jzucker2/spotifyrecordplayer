@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class SPTAudioStreamingController;
+@class SPTAuthViewController;
 
 @interface JSZSpotifyAPI : NSObject
 
@@ -17,6 +18,8 @@
 - (BOOL)handleAuthCallbackURL:(NSURL *)callbackURL;
 
 - (void)renewToken;
+
+- (SPTAuthViewController *)authViewController;
 
 //@property (nonatomic, readonly) SPTAudioStreamingController *player;
 

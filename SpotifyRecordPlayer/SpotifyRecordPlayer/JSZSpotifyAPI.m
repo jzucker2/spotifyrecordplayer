@@ -97,6 +97,14 @@
     }];
 }
 
+- (SPTAuthViewController *)authViewController {
+    SPTAuthViewController *authViewController = [SPTAuthViewController authenticationViewController];
+    authViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    authViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    return authViewController;
+}
+
 //#pragma mark - SPTAudioStreamingController
 //
 //- (SPTAudioStreamingController *)player {

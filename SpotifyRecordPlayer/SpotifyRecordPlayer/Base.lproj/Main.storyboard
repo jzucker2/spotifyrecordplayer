@@ -26,7 +26,7 @@
         <!--Item 2-->
         <scene sceneID="i3N-Kl-aGx">
             <objects>
-                <viewController id="LOt-XD-hDc" sceneMemberID="viewController">
+                <viewController id="LOt-XD-hDc" customClass="SpotifyLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7HT-Ap-Ifg"/>
                         <viewControllerLayoutGuide type="bottom" id="bA8-me-yQQ"/>
