@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Jordan Zucker. All rights reserved.
 //
 
+#import <Spotify/Spotify.h>
+
 #import "ViewController.h"
 
 @interface ViewController ()
