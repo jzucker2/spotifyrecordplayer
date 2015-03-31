@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Jordan Zucker. All rights reserved.
 //
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <Spotify/Spotify.h>
 #import "Constants.h"
 #import "JSZSpotifyAPI.h"
@@ -59,7 +60,7 @@
         // This is the callback that'll be triggered when auth is completed (or fails).
         
         if (error != nil) {
-            NSLog(@"*** Auth error: %@", error);
+            DDLogError(@"*** Auth error: %@", error);
             return;
         }
         
@@ -89,7 +90,7 @@
         
         if (error) {
 //            self.statusLabel.text = @"Refreshing token failed.";
-            NSLog(@"*** Error renewing session: %@", error);
+            DDLogError(@"*** Error renewing session: %@", error);
             return;
         }
         
